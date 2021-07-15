@@ -1,0 +1,36 @@
+version: "3"
+services:
+  adidas_db:
+    container_name: AdidasDB
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./DB:/DB
+    environment:
+      - MONGO_INITDB_DATABASE=Adidas
+  product_review_service:
+    container_name: ProductReviewService
+    build: ./ProductReviewService/.
+    depends_on:
+      - "adidas_db"
+    ports:
+      - "43002:43002"
+    volumes:
+      - ./ProductReviewService:/home/node/app
+    environment:
+      - MONGODB_URI=mongodb://AdidasDB:27017/Adidas
+      - JWT_SECRET=wQEJLTWIwM0kmJjKlem16VU5yg6WBj664wNCxj2ljWF
+      - SALT_SECRET=8
+  product_service:
+    container_name: ProductService
+    build: ./ProductService/.
+    depends_on:
+      - "product_review_service"
+    ports:
+      - "43001:43001"
+    volumes:
+      - ./ProductService:/home/node/app
+    environment:
+      - PRODUCT_REVIEW_SERVICE_URI=http://ProductReviewService:43002
+      - MONGODB_URI=mongodb://AdidasDB:27017/Adidas

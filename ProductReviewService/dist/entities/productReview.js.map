@@ -1,0 +1,1 @@
+{"version":3,"file":"productReview.js","sourceRoot":"","sources":["../../src/entities/productReview.ts"],"names":[],"mappings":";;AAAA,uCAAiE;AAQpD,QAAA,mBAAmB,GAAG,IAAI,iBAAM,CAAC;IAC5C,SAAS,EAAE;QACT,IAAI,EAAE,MAAM;QACZ,QAAQ,EAAE,IAAI;QACd,MAAM,EAAE,IAAI;KACb;IACD,kBAAkB,EAAE,MAAM;IAC1B,eAAe,EAAE,MAAM;CACxB,CAAC,CAAC;AAEU,QAAA,aAAa,GAA0B,gBAAK,CAAiB,eAAe,EAAE,2BAAmB,CAAC,CAAC"}

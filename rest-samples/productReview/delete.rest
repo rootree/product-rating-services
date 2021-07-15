@@ -1,0 +1,2 @@
+DELETE http://127.0.0.1:43002/review/FW1079
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lIiwiaWF0IjoxNTUxNDc0MDcwfQ.Nel6AblbUxxo2FBauJT1ngD5icI6-HPDC32UfK0b5Ck

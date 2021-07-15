@@ -1,0 +1,1 @@
+GET  http://127.0.0.1:43001/product/FW1079 HTTP/1.1
